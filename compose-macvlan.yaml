@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  myservice:
+    image: nginx:latest
+    networks:
+      mynet1:
+        ipv4_address: 172.16.0.12
+      mynet2:
+        ipv4_address: 172.20.0.22
+      macvlan_net1:
+        ipv4_address: 192.168.0.32
+
+networks:
+  mynet1:
+    driver: bridge
+    ipam:
+      config:
+        # If there is an overlap between this subnet and one in your current environment, 
+        # you should create another custom subnet that meets your specific needs. 
+        # the same solution applies other subnets as well
+        - subnet: 172.16.0.0/24
+          gateway: 172.16.0.1
+  mynet2:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24
+          gateway: 172.20.0.1
+  macvlan_net1:
+    driver: macvlan
+    driver_opts:
+      parent: eth0
+      mode: bridge
+    ipam:
+      config:
+        - subnet: 192.168.0.0/24
+          gateway: 192.168.0.1
