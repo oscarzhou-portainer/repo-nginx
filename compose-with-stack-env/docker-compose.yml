@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    
+  nginx-cont:
+    env_file:
+      - path: ./stack.env
+        required: true
+    image: nginx:latest
+    container_name: "${CONTAINER_NAME}"
+    ports:
+      - "${PORT:-81}:80"
