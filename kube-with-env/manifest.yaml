@@ -22,15 +22,4 @@ spec:
           value: "${ENV_VAR_ONE}"
         - name: ENV_VAR_TWO
           value: "${ENV_VAR_TWO}"
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: nginx-service
-spec:
-  selector:
-    app: nginx
-  ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
+
