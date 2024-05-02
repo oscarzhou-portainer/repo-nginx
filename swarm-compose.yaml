@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+    
+  nginx-cont:
+    env_file:
+      "stack.env"
+    image: registry.internal.services.oscarchou.com/oscarchou/portainer-demo/nginx:latest
+    container_name: "${CONTAINER_NAME}"
+    ports:
+      - "${PORT:-81}:80"
