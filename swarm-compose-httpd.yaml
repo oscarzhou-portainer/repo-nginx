@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+    
+  httpd-cont:
+    env_file:
+      "stack.env"
+    image: ghcr.io/oscarzhou-portainer/httpd:latest
+    container_name: "${CONTAINER_NAME}"
+    ports:
+      - "${PORT:-81}:80"
