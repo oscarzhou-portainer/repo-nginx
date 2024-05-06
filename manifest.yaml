@@ -16,5 +16,5 @@ spec:
       - name: nginx
         image: ghcr.io/oscarzhou-portainer/portainer-demo/nginx:latest
       imagePullSecrets:
-      - name: oscar-git-registry
+      - name: registry-2
       
