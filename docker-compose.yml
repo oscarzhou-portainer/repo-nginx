@@ -6,3 +6,5 @@ services:
     container_name: "${NAME}"
     ports:
       - "${PORT:-81}:80"
+    labels:
+      - branch="main"
