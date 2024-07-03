@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  nginxxxx-container:
+    image: nginxxxx:latest
+    container_name: "${NAME}"
+    ports:
+      - "${PORT:-7788}:80"
+    labels:
+      - branch="main"
+      - version=5
