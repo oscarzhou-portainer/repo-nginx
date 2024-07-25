@@ -9,3 +9,6 @@ services:
       - ./html:/usr/share/nginx/html
     deploy:
       replicas: 1
+      placement:
+        constraints:
+          - node.labels.role == manager
