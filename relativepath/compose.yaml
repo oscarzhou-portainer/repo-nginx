@@ -3,7 +3,7 @@ services:
  large-app:
   image: 6261998/alpine:latest
   volumes:
-      - ../html:/home/html
+      - ./html:/home/html
   tty: true
   stdin_open: true
   environment:
