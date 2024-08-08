@@ -8,4 +8,4 @@ services:
       - "${PORT:-81}:80"
     labels:
       - branch="main"
-      - version=1
+      - version=2
