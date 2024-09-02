@@ -10,3 +10,4 @@ services:
    - ${ENV:-default}=novigrad
    - ${ENV2:-default2}=raphael
    - ${ENV3:-default3}=esm
+   - ${ENV4}=${ENV4}
