@@ -4,7 +4,7 @@ services:
     ports:
       - 8019:80
     env_file:
-      - stack.env
+      - .env
     volumes:
       - ${WEB_HOME}:/usr/share/nginx/html/
       
