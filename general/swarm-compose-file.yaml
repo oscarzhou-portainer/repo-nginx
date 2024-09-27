@@ -1,0 +1,37 @@
+version: '3.8'  # Version 3 is necessary for Docker Swarm compatibility
+
+services:
+  web:
+    image: nginx:alpine  # The service will use the nginx image
+    ports:
+      - "80:80"  # Map port 80 on the host to port 80 in the container
+    deploy:
+      replicas: 3  # This will create 3 instances (replicas) of the web service
+      update_config:
+        parallelism: 2  # Limit the number of containers updated at once
+        delay: 10s      # Wait 10 seconds between updating batches
+      restart_policy:
+        condition: on-failure  # Restart only if the container fails
+      placement:
+        constraints:
+          - node.role == manager  # Ensure the service only runs on manager nodes
+    networks:
+      - frontend
+
+  redis:
+    image: redis:alpine  # Redis service
+    volumes:
+      - redis-data:/data  # Persist data in a named volume
+    deploy:
+      replicas: 2  # This will create 2 instances (replicas) of the redis service
+      restart_policy:
+        condition: any  # Restart the container no matter why it stopped
+    networks:
+      - backend
+
+volumes:
+  redis-data:  # Named volume for redis data
+
+networks:
+  frontend:  # Separate network for web service
+  backend:   # Separate network for redis service
