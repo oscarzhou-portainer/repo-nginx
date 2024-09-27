@@ -2,4 +2,4 @@ services:
   nginx-cont:
     image: ghcr.io/oscarzhou-portainer/portainer-demo/nginx:latest
     ports:
-      - "${PORT:-81}:80"
+      - "${PORT:-8881}:80"
