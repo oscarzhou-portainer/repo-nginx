@@ -6,7 +6,7 @@ services:
     ports:
       - "80:80"  # Map port 80 on the host to port 80 in the container
     deploy:
-      replicas: 3  # This will create 3 instances (replicas) of the web service
+      replicas: 1  # This will create 3 instances (replicas) of the web service
       update_config:
         parallelism: 2  # Limit the number of containers updated at once
         delay: 10s      # Wait 10 seconds between updating batches
@@ -23,7 +23,7 @@ services:
     volumes:
       - redis-data:/data  # Persist data in a named volume
     deploy:
-      replicas: 2  # This will create 2 instances (replicas) of the redis service
+      replicas: 1  # This will create 2 instances (replicas) of the redis service
       restart_policy:
         condition: any  # Restart the container no matter why it stopped
     networks:
