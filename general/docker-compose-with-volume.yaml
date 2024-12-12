@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  myservice:
+    image: nginx:latest
+    volumes:
+      - myvolume:/data
+
+volumes:
+  myvolume:
