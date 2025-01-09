@@ -11,3 +11,5 @@ services:
    - ${ENV2:-default2}=raphael
    - ${ENV3:-default3}=esm
    - MY_JSON={"key":value}
+
+# inject env var to reproduce: MY_ENV=null
