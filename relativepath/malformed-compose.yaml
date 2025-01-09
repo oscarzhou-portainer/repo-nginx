@@ -1,0 +1,13 @@
+version: '3'
+services:
+ large-app:
+  image: 6261998/alpine:latest
+  volumes:
+      - ./html:/home/html
+  tty: true
+  stdin_open: true
+  environment:
+   - ${ENV:-default}=novigrad
+   - ${ENV2:-default2}=raphael
+   - ${ENV3:-default3}=esm
+   - MY_JSON={"key":value}
