@@ -7,7 +7,7 @@ services:
   tty: true
   stdin_open: true
   environment:
-   - ${ENV:-default}=novigrad
+   - ${ENV:-default}=novigrad1
    - ${ENV2:-default2}=raphael
    - ${ENV3:-default3}=esm
    - MY_JSON={"key":value}
