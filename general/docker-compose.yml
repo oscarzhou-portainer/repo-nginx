@@ -7,5 +7,5 @@ services:
     ports:
       - "${PORT:-81}:80"
     labels:
-      - branch="main"
+      - branch="test-branch"
       - version=4
