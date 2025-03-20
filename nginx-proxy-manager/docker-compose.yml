@@ -11,4 +11,4 @@ services:
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
     labels:
-      - version=4
+      - version=1
