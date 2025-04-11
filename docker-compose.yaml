@@ -1,11 +1,22 @@
-version: '3'
+version: '3.7'
 
 services:
-  nginx-container:
-    image: nginx:latest
+  web:
+    image: nginx:alpine
     container_name: "${NAME}"
+    container_name: my_nginx
+    networks:
+      custom_net:
+        ipv4_address: 172.22.0.2
     ports:
       - "${PORT:-81}:80"
     labels:
       - branch="main"
-      - version=3
+      - version=3        
+
+networks:
+  custom_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.22.0.0/16
