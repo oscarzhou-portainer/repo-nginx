@@ -1,0 +1,11 @@
+version: '3' #To use this you have to match the file name with the environment edge id
+services:
+ alpine-gitops:
+  tty: true
+  stdin_open: true
+  image: alpine
+  environment:
+   - hello=hi
+   - super=hoopla
+  volumes:
+   - ./html/${PORTAINER_EDGE_ID}.txt:/home/config-edgeid.txt
