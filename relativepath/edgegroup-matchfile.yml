@@ -1,0 +1,14 @@
+version: '3' #To use this make sure that you have an edge group that has the name gitops
+services:
+ alpine-gitops:
+  image: alpine
+  tty: true
+  stdin_open: true
+  environment:
+   - hello=hi
+   - cassd=xzc
+   - xzc=dfg
+   - as=xzc
+   
+  volumes:
+   - ./html/${PORTAINER_EDGE_GROUP}.html:/home/config-edgegroup.txt
