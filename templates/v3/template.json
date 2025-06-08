@@ -1,0 +1,12 @@
+{
+  "version": "3",
+  "templates": [
+    {
+      "id": 1,
+      "name": "SMTP_PASSWORD",
+      "default": "",
+      "label": "SMTP Password",
+      "description": "Password for connecting to the SMTP server."
+    }
+  }
+}
