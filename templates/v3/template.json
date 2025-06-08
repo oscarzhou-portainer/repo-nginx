@@ -8,5 +8,5 @@
       "label": "SMTP Password",
       "description": "Password for connecting to the SMTP server."
     }
-  }
+  ]
 }
