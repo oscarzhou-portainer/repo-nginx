@@ -3,6 +3,7 @@
   "templates": [
     {
       "id": 1,
+      "type": 1,
       "name": "SMTP_PASSWORD",
       "default": "",
       "label": "SMTP Password",
