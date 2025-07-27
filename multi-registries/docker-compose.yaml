@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  httpd-1:
+    image: registry.internal.services.oscarchou.com/httpd:latest
+    
+  httpd-2:
+    image: ghcr.io/oscarzhou-portainer/httpd:latest
