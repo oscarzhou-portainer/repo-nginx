@@ -6,3 +6,5 @@ services:
     
   httpd-2:
     image: ghcr.io/oscarzhou-portainer/httpd:latest
+
+# In order to reproduce the issue, we need to configure another ghcr private registry in Portainer
