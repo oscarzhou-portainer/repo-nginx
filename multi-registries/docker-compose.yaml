@@ -5,7 +5,7 @@ services:
     image: registry.internal.services.oscarchou.com/httpd:latest
     
   httpd-2:
-    image: image: ghcr.io/melsacramento/priv:alpine
+    image: ghcr.io/melsacramento/priv:alpine
     # image: ghcr.io/oscarzhou-portainer/httpd:latest
 
 # In order to reproduce the issue, we need to configure another ghcr private registry in Portainer
