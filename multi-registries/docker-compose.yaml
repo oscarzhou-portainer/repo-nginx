@@ -4,7 +4,7 @@ services:
   httpd-1:
     image: registry.internal.services.oscarchou.com/httpd:latest
     
-  httpd-2:
+  httpd-3:
     image: ghcr.io/jamescarppe/nginx:latest
     # image: ghcr.io/oscarzhou-portainer/httpd:latest
 
