@@ -7,5 +7,5 @@ services:
     ports:
       - "${PORT:-81}:80"
     labels:
-      - branch="not main"
+      - branch="disable force deployment"
       - version=3
