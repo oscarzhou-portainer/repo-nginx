@@ -7,3 +7,4 @@ services:
       - ${WEB_HOME}:/usr/share/nginx/html/
     env_file:
       - stack.env
+## test
