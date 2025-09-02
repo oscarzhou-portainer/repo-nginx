@@ -2,7 +2,7 @@
 
 This repository is created for testing how docker-compose behaves while spinning up multiple compose files in a single repository and in the different repositories
 
-## 1. How to set up?
+## 1. How to set up1?
 
 For testing compose files in multiple repositories, it will need to download another testing repository `repo-httpd`
 
