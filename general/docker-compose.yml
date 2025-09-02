@@ -5,7 +5,7 @@ services:
     image: nginx:latest
     container_name: "${NAME}"
     ports:
-      - "${PORT:-82}:80"
+      - "${PORT:-83}:80"
     labels:
       - branch="update"
       - version=4
