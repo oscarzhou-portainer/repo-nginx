@@ -1,8 +1,0 @@
-version: '3'
-
-services:
-  nginx-container:
-    image: nginx
-    container_name: "${NAME}"
-    ports:
-      - "${PORT:-8122}:80"
