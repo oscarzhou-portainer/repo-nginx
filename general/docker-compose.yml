@@ -7,5 +7,5 @@ services:
     ports:
       - "${PORT:-83}:80"
     labels:
-      - branch="update"
+      - branch="${BRANCH:-develop}"
       - version=4
