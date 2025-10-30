@@ -4,4 +4,4 @@ services:
   nginx-alpine-container:
     image: nginx/alpine:latest
     ports:
-      - "${PORT:-81}:80"
+      - "${PORT:-82}:80"
