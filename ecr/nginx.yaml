@@ -2,6 +2,6 @@ version: '3'
 
 services:
   nginx-container:
-    image: 533267062141.dkr.ecr.ap-southeast-2.amazonaws.com/private:nginx
+    image: 533267062141.dkr.ecr.ap-southeast-2.amazonaws.com/private:nat
     environment:
       - LABEL=abc
