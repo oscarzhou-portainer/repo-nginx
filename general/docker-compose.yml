@@ -8,6 +8,6 @@ services:
       - "${PORT:-83}:80"
     labels:
       - branch="${BRANCH:-develop}"
-      - version=5
+      - version=56
     environment:
       - LABEL=abcddddaaaa      
