@@ -9,3 +9,5 @@ services:
     labels:
       - branch="${BRANCH:-develop}"
       - version=5
+    environment:
+      - LABEL=abc      
