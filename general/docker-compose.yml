@@ -8,4 +8,4 @@ services:
       - "${PORT:-83}:80"
     labels:
       - branch="${BRANCH:-develop}"
-      - version=4
+      - version=5
