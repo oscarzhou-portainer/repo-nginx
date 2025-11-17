@@ -10,4 +10,4 @@ services:
       - branch="${BRANCH:-develop}"
       - version=56
     environment:
-      - LABEL=abcddddaaaa      
+      - LABEL=abcd
