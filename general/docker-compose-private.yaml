@@ -2,7 +2,9 @@ version: '3'
 
 services:
   nginx-container:
-    image: registry.internal.services.oscarchou.com/nginx:22
+    image: registry.internal.services.oscarchou.com/nginx:alpine
     container_name: "${NAME}"
+    volumes:
+      - ../relativepath/html:/usr/share/nginx/html
     ports:
       - "${PORT:-8122}:80"
