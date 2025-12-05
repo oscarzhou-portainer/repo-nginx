@@ -3,7 +3,7 @@ version: '3'
 services:
   nginx-container:
     image: registry.internal.services.oscarchou.com/nginx:alpine
-    container_name: "${NAME}"
+    container_name: "nginx-private-image-relative-path"
     volumes:
       - ../relativepath/html:/usr/share/nginx/html
     ports:
