@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  nginx-container:
+    image: portainertest.azurecr.io/nginx:alpine
+    container_name: "nginx-private-image-relative-path"
+    volumes:
+      - ../relativepath/html:/usr/share/nginx/html
+    ports:
+      - "${PORT:-8122}:80"
