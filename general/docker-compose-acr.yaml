@@ -7,4 +7,4 @@ services:
     volumes:
       - ../relativepath/html:/usr/share/nginx/html
     ports:
-      - "${PORT:-8122}:80"
+      - "${PORT:-8123}:80"
