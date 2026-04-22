@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  log-generator:
+    image: busybox
+    container_name: log-generator
+    command: >
+      sh -c "
+      i=0;
+      while true; do
+        echo \"[$(date +%Y-%m-%dT%H:%M:%S)] log line $i\";
+        i=$((i+1));
+        sleep 1.8;
+      done
+      "
