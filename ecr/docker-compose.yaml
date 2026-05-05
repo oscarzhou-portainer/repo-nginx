@@ -1,0 +1,8 @@
+services:
+  test-stack:
+    image: alpine:3.20
+    container_name: test-stack
+    command: ["sh", "-c", "sleep infinity"]
+    restart: unless-stopped
+    labels:
+      - test=abc7
