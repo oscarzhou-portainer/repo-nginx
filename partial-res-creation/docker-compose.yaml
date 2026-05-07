@@ -3,4 +3,4 @@ services:
     image: nats
     container_name: nats222
     ports:
-      - 8000:80
+      - 8020:80
