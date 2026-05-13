@@ -1,8 +1,8 @@
 services:
   nats:
-    image: nats
+    image: nats11
     container_name: nats222
     ports:
-      - 8010:80
+      - 8000:80
     labels:
       - test="abc"
