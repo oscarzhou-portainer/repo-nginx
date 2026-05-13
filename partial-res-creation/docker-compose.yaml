@@ -5,4 +5,4 @@ services:
     ports:
       - 8010:80
     labels:
-      - test="abc"
+      - test="abc1"
