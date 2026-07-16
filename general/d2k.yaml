@@ -146,7 +146,7 @@ roleRef:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: d2k
+  name: d2222k
   namespace: d2k   # change to your target namespace
   labels:
     app: d2k
