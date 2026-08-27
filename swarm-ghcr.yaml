@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  nginx-cont:
+    image: ghcr.io/oscarzhou-portainer/httpd:latest
+    ports:
+      - target: 80
+        published: ${PORT:-81}
+        protocol: tcp
+        mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 6
+      placement:
+        max_replicas_per_node: 2
