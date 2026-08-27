@@ -10,6 +10,6 @@ services:
         mode: ingress
     deploy:
       mode: replicated
-      replicas: 6
+      replicas: 3
       placement:
-        max_replicas_per_node: 2
+        max_replicas_per_node: 1
