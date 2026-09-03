@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   private-image-test:
-    image: harbor.portainercloud.io/oscar-test/alpine:0.0.1
+    image: harbor.portainercloud.io/oscar-test/alpine:0.0.3
 
     command:
       - /bin/sh
