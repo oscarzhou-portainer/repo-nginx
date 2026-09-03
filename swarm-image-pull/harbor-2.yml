@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  private-image-test:
+    image: harbor.portainercloud.io/oscar-test-2/alpine:0.0.1
+
+    command:
+      - /bin/sh
+      - -c
+      - |
+        echo "Running private image version:"
+        cat /image-version.txt
+        while true; do
+          sleep 3600
+        done
+
+    deploy:
+      replicas: 3
+
+      restart_policy:
+        condition: any
+        delay: 5s
+
+      placement:
+        max_replicas_per_node: 1
