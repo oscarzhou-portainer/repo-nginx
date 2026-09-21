@@ -4,7 +4,6 @@ services:
     command: ["sleep", "infinity"]
     environment:
       ROLL: "0"
-      VERSION: "3.20"
     healthcheck:
       test: ["CMD", "true"]
       interval: 2s
