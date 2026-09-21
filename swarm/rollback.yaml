@@ -1,0 +1,19 @@
+services:
+  app:
+    image: alpine:${VERSION}
+    command: ["sleep", "infinity"]
+    environment:
+      ROLL: "0"
+      VERSION: "3.20"
+    healthcheck:
+      test: ["CMD", "true"]
+      interval: 2s
+      start_period: 10s   # widens the old/new task overlap past Portainer's 1s poll
+    deploy:
+      replicas: 2
+      update_config:
+        order: start-first
+        failure_action: rollback
+      rollback_config:
+        order: start-first
+        parallelism: 1
