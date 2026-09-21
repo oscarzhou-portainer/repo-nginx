@@ -1,6 +1,6 @@
 services:
   app:
-    image: alpine:${VERSION}
+    image: alpine:"${VERSION}"
     command: ["sleep", "infinity"]
     environment:
       ROLL: "0"
