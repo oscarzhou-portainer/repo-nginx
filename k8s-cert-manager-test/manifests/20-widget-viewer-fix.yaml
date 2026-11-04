@@ -1,0 +1,22 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: fr1357-widget-viewer
+rules:
+  - apiGroups: ["fr1357.example.com"]
+    resources: ["widgets"]
+    verbs: ["get", "list", "watch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: fr1357-widget-viewer
+  namespace: fr1357
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: fr1357-widget-viewer
+subjects:
+  - kind: ServiceAccount
+    name: <SA_NAME>
+    namespace: portainer
