@@ -18,5 +18,5 @@ roleRef:
   name: fr1357-widget-viewer
 subjects:
   - kind: ServiceAccount
-    name: <SA_NAME>
+    name: portainer-sa-user-bc78df04-4b14-4be1-aecf-7fcd6dd1bfca-8
     namespace: portainer
