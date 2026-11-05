@@ -1,0 +1,6 @@
+apiVersion: be13646.example.com/v1
+kind: Gadget
+metadata:
+  name: {{ .Release.Name }}-gadget
+spec:
+  size: {{ .Values.size | quote }}

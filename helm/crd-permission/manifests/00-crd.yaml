@@ -1,0 +1,19 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: gadgets.be13646.example.com
+spec:
+  group: be13646.example.com
+  scope: Cluster
+  names:
+    plural: gadgets
+    singular: gadget
+    kind: Gadget
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          x-kubernetes-preserve-unknown-fields: true
