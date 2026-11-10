@@ -1,0 +1,7 @@
+apiVersion: v2
+name: escape
+version: 0.1.0
+dependencies:
+  - name: xxx
+    version: 0.1.0
+    repository: file://../../../../xxx
