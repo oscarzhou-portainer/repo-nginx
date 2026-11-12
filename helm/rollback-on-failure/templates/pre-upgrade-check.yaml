@@ -1,0 +1,18 @@
+{{- if .Values.failUpgrade }}
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ .Release.Name }}-pre-upgrade-check
+  annotations:
+    "helm.sh/hook": pre-upgrade
+    "helm.sh/hook-delete-policy": before-hook-creation
+spec:
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: check
+          image: busybox:1.36
+          command: ["sh", "-c", "echo 'forced upgrade failure'; exit 1"]
+{{- end }}

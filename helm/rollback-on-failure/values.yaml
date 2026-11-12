@@ -1,0 +1,4 @@
+# Change this on every upgrade you want to show up as a new revision
+marker: "v1"
+# true makes the pre-upgrade hook fail
+failUpgrade: false
