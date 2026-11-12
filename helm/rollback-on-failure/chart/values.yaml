@@ -1,0 +1,11 @@
+replicaCount: 1
+
+image:
+  repository: nginx
+  tag: "1.27-alpine"
+
+# Change this on an upgrade to roll the pods and create a new revision
+marker: "v1"
+
+# true makes the pre-upgrade hook fail, so the upgrade fails
+failUpgrade: false
