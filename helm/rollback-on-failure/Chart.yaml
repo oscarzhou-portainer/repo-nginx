@@ -1,0 +1,6 @@
+apiVersion: v2
+name: rollback-on-failure-test
+description: Test chart for the Helm Rollback on failure feature
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
