@@ -1,0 +1,4 @@
+services:
+  app:
+    image: alpine:does-not-exist-be13469
+    command: ["sleep", "infinity"]

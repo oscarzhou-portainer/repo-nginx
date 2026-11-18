@@ -1,0 +1,10 @@
+services:
+  app:
+    image: alpine:3.20
+    command: ["sleep", "infinity"]
+    environment:
+      ROLL: "0"
+    deploy:
+      replicas: 3
+      update_config:
+        order: start-first
